@@ -97,8 +97,8 @@ Este repositorio contiene material, ejemplos de código y proyectos desarrollado
 2. Abre el proyecto en tu entorno de desarrollo preferido (Visual Studio, Rider, etc.).
 3. Sigue las instrucciones en los archivos README de cada carpeta para más detalles sobre los proyectos específicos.
 
-##🤝 Contribuciones
+## 🤝 Contribuciones
 ¡Las contribuciones son bienvenidas! Si encuentras algún error o tienes sugerencias para mejorar el contenido, no dudes en crear un issue o enviar un pull request.
 
-##📄 Licencia
+## 📄 Licencia
 Este proyecto se distribuye bajo la licencia MIT. Consulta el archivo LICENSE para más detalles.
