@@ -3,6 +3,14 @@
 **Tecnicatura de Desarrollo y Producción de Videojuegos**  
 **Universidad Tecnológica Nacional**
 
+## 👨‍🏫 Profesores
+Alejandro Giongrande
+Marcos Cabana
+Cristian Pablo Duarte
+Jorge Manuel Gutierrez Allende
+Mariano Martinez Princic
+Ariel Restagno Barros
+
 ## 📝 Descripción
 
 Este repositorio contiene material, ejemplos de código y proyectos desarrollados durante la cátedra **Programación de Videojuegos I**. El objetivo es proporcionar a los estudiantes los recursos necesarios para aprender y aplicar los fundamentos de la programación orientada al desarrollo de videojuegos.
