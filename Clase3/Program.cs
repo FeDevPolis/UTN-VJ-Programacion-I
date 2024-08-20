@@ -33,7 +33,8 @@ int puntajeSumatoria = monedasOro * valorOro + monedasPlata * valorPlata + moned
 Console.WriteLine("Total de monedas: " + totalMonedas + "\nValor total: " + puntajeSumatoria);
 
 /*
-Consigna 2. Registro de Jugadores
+Consigna 2. 
+Registro de Jugadores
 Realice un sistema que solicite al jugador que ingrese su nombre, nivel
 y clase de personaje. Luego, muestra un mensaje de bienvenida
 personalizado y su información de personaje.
@@ -54,7 +55,8 @@ string characterClass = Console.ReadLine();
 Console.WriteLine("\n\n¡¡¡Bienvenido a Tierras Lejanas " + name + " (lv " + level + ") " + characterClass + " !!!");
 
 /*
-3. Poder de ataque
+Consigna 3. 
+Poder de ataque
 Realice un sistema que solicite el nivel del personaje y el daño del
 arma. Debe calcular el poder de ataque total y mostrarlo en consola.
 El poder de ataque surgirá de multiplicar ambos valores ingresados.
