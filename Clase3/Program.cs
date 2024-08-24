@@ -62,7 +62,7 @@ arma. Debe calcular el poder de ataque total y mostrarlo en consola.
 El poder de ataque surgirá de multiplicar ambos valores ingresados.
 */
 
-// se utiliza la misma variable level declarada en la consigna anterior Línea 48
+// se utiliza la misma variable level declarada en la consigna anterior Línea 49
 Console.WriteLine("\n\nIngrese su nivel: ");
 level = int.Parse(Console.ReadLine());
 
