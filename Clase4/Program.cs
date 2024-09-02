@@ -107,16 +107,17 @@
 //actual. Luego, el sistema debe mostrar la salud como porcentaje de
 //la salud máxima que es de 100.
 
+//int maxHP = 100;
 
 //Console.WriteLine("Ingresa tu nombre: ");
 //string namePJ = Console.ReadLine();
 
 //Console.WriteLine("Ingresa tu HP actual: ");
-//int healthPJ = int.Parse(Console.ReadLine());
+//int charHP = int.Parse(Console.ReadLine());
 
-//int aux1 = 100 - healthPJ;
+//int aux1 = maxHP - charHP;
 
-//Console.WriteLine(new string('■', healthPJ) + new string('_', aux1));
+//Console.WriteLine(new string('■', charHP) + new string('_', aux1));
 
 
 //9) Un sistema que solicite el ingreso de la cantidad de enemigos
