@@ -173,15 +173,16 @@
 //tiempo jugado en horas y minutos.
 
 
-//Console.WriteLine("Ingresa tu nombre: ");
-//string namePJ = Console.ReadLine();
+//Console.WriteLine("Ingresa el nombre del juego: ");
+//string game = Console.ReadLine();
 
 //Console.Write("Ingrese los minutos jugados: ");
-//float timePlayed = float.Parse(Console.ReadLine());
+//int timePlayed = int.Parse(Console.ReadLine());
 
-//timePlayed = timePlayed / 60.0f;
+//int hours = timePlayed / 60;
+//int minutes = timePlayed % 60;
 
-//Console.WriteLine($"Has jugado {timePlayed} horas.");
+//Console.WriteLine($"Has jugado {game} durante {hours} horas y {minutes} minutos.");
 
 
 //12) Un sistema que solicite el ingreso de los nombres de tres personajes.
