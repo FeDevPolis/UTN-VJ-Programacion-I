@@ -16,23 +16,19 @@ playerExp = int.Parse(Console.ReadLine());
 
 while( playerExp >= lvUp)
 {
-
     lv++;
     playerExp -= lvUp;
-
 
     //agrego este if, que hace que cada diez niveles subidos aumente en 100
     //la experiencia necesaria para subir de nivel
     if (lv % 10 == 0) 
     {
-
         lvUp += 100;
-
-    }
-        
+    }        
 }
 
-Console.WriteLine($"Player level: {lv} Exp: {playerExp}/{lvUp}");
+Console.WriteLine($"Player level: {lv} Exp: {playerExp}/{lvUp}\n");
+
 
 //2. Solicitar Nombre del Jugador
 //Escribe un programa que solicite al jugador ingresar su nombre. Si el
@@ -40,8 +36,22 @@ Console.WriteLine($"Player level: {lv} Exp: {playerExp}/{lvUp}");
 //nuevamente el ingreso del nombre hasta que cumpla con la longitud
 //requerida.
 
+string playerName;
+int nameLenght;
 
+Console.WriteLine("Ingrese su nombre: ");
+playerName = Console.ReadLine();
 
+nameLenght = playerName.Length;
+
+while (nameLenght < 8)
+{
+    Console.WriteLine($"Su nombre debe tener más de 8 caracteres, no {nameLenght} \nIngrese su nombre nuevamente: ");
+    playerName = Console.ReadLine();
+    nameLenght = playerName.Length;
+} 
+
+Console.WriteLine($"{playerName} tiene {nameLenght} caracteres\n");
 
 
 //3. Contar golpes críticos
@@ -51,8 +61,21 @@ Console.WriteLine($"Player level: {lv} Exp: {playerExp}/{lvUp}");
 //o 10, cuenta como un golpe crítico. Muestra cuántos golpes críticos
 //realizó el jugador al final.
 
+Random rdm = new Random();
+int critical = 0;
 
+for (int hits = 0; hits < 10; hits++)
+{
+    int damage = rdm.Next(11);
+    Console.WriteLine($"Damage: {damage}");
 
+    if (damage > 7)
+    {
+        critical++;
+    }
+}
+
+Console.WriteLine($"El jugador realizó {critical} golpe/s crítico/s.");
 
 
 //4. Adivina el Número de Enemigos
@@ -63,8 +86,19 @@ Console.WriteLine($"Player level: {lv} Exp: {playerExp}/{lvUp}");
 //intento, informa si el número ingresado es incorrecto y pide otro
 //intento.
 
+int enemyQty = 7;
+int userInput;
 
+Console.WriteLine("\nAdivine cuántos enemigo hay en la habitación: ");
+userInput = int.Parse(Console.ReadLine());
 
+while (userInput != enemyQty)
+{
+    Console.WriteLine("Intenta nuevamente: ");
+    userInput = int.Parse(Console.ReadLine());
+}
+
+Console.WriteLine($"Felicidades, haz adivinado! Hay {enemyQty} enemigos en la habitación.");
 
 
 //5. Cargar Energía del Jugador
@@ -74,3 +108,13 @@ Console.WriteLine($"Player level: {lv} Exp: {playerExp}/{lvUp}");
 //intervalos de 10, mostrando el progreso en cada paso. Cuando la
 //energía llega a 100, el bucle debe detenerse y mostrar que la energía
 //está completa.
+
+int charEnergy = 0;
+
+for (int i = 0; i < 10; i++)
+{
+    charEnergy += 10;
+    Console.WriteLine($"Energía: {charEnergy}");
+}
+
+Console.WriteLine("Energía completa.");
