@@ -14,15 +14,25 @@ Console.WriteLine("Ingrese la experiencia acumulada:");
 
 playerExp = int.Parse(Console.ReadLine());
 
-while( playerExp >= 100)
+while( playerExp >= lvUp)
 {
 
     lv++;
     playerExp -= lvUp;
 
+
+    //agrego este if, que hace que cada diez niveles subidos aumente en 100
+    //la experiencia necesaria para subir de nivel
+    if (lv % 10 == 0) 
+    {
+
+        lvUp += 100;
+
+    }
+        
 }
 
-Console.WriteLine($"Player level: {lv} Exp: {playerExp}/100");
+Console.WriteLine($"Player level: {lv} Exp: {playerExp}/{lvUp}");
 
 //2. Solicitar Nombre del Jugador
 //Escribe un programa que solicite al jugador ingresar su nombre. Si el
