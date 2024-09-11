@@ -98,7 +98,7 @@ while (userInput != enemyQty)
     userInput = int.Parse(Console.ReadLine());
 }
 
-Console.WriteLine($"Felicidades, haz adivinado! Hay {enemyQty} enemigos en la habitación.");
+Console.WriteLine($"Felicidades, haz adivinado! Hay {enemyQty} enemigos en la habitación.\n");
 
 
 //5. Cargar Energía del Jugador
