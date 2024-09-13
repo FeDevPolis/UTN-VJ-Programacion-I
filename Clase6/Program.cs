@@ -67,8 +67,9 @@ int critical = 0;
 for (int hits = 0; hits < 10; hits++)
 {
     int damage = rdm.Next(11);
-    //Console.WriteLine($"Damage: {damage}");
+    Console.WriteLine($"Damage: {damage}"); // considero que queda más vistoso sin mostrar el daño y solo el tipo de golpe del if que sigue
 
+    // el if siguiente devuelve que tipo de golpe es segun el daño generado miss / hit / critical
     if (damage > 7)
     {
         critical++;
