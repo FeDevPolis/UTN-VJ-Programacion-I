@@ -67,11 +67,20 @@ int critical = 0;
 for (int hits = 0; hits < 10; hits++)
 {
     int damage = rdm.Next(11);
-    Console.WriteLine($"Damage: {damage}");
+    //Console.WriteLine($"Damage: {damage}");
 
     if (damage > 7)
     {
         critical++;
+        Console.WriteLine("Critical");
+    }
+    else if (damage < 1)
+    {
+        Console.WriteLine("Miss");
+    }
+    else
+    {
+        Console.WriteLine("Hit");
     }
 }
 
