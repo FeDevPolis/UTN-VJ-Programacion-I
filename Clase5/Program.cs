@@ -216,7 +216,6 @@ Console.WriteLine($"Enemigos derrotados: {enemies} x 10 pts\nBonus:  {bonus} pts
 //ninguna de estas condiciones, muestra "Defensa Media".
 
 
-
 Console.WriteLine("\nIngresa la resistencia de tu escudo: ");
 int shield = int.Parse(Console.ReadLine());
 
