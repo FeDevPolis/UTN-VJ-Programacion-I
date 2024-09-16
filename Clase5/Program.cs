@@ -6,9 +6,9 @@
 
 
 Console.WriteLine("Ingresa la vida del jugador");
-int vida = int.Parse(Console.ReadLine());
+int life = int.Parse(Console.ReadLine());
 
-if (vida <= 0)
+if (life <= 0)
 {
     Console.WriteLine("Has sido derrotado");
 }
@@ -26,18 +26,18 @@ else
 //especiales de cada una.
 
 Console.WriteLine("\nElige tu arma: \n1. Espada\n2. Arco\n3. Magia");
-int seleccion = int.Parse(Console.ReadLine());
+string choice = Console.ReadLine().Replace(" ","");
 
-switch (seleccion)
+switch (choice)
 {
-    case 1:
-        Console.WriteLine("Espada seleccionada! \nHP: 150\nFuerza: 100\nAgilidad: 75\nInteligencia: 50");
+    case "1":
+        Console.WriteLine("Espada seleccionada! \nDPS: 150");
         break;
-    case 2:
-        Console.WriteLine("Arco seleccionado! \nHP: 90\nFuerza: 75\nAgilidad: 100\nInteligencia: 50");
+    case "2":
+        Console.WriteLine("Arco seleccionado! \nDPS: 90");
         break;
-    case 3:
-        Console.WriteLine("Magia seleccionado! \nHP: 100\nFuerza: 50\nAgilidad: 50\nInteligencia: 100");
+    case "3":
+        Console.WriteLine("Magia seleccionado! \nDPS: 180\nMana: 40");
         break;
     default:
         Console.WriteLine("Opcion incorrecta");
@@ -60,7 +60,7 @@ if (level < 5)
 {    
     Console.WriteLine("Novato");
 }
-else if (level < 10)
+else if (level > 10)
 {
     Console.WriteLine("Experto");
 }
@@ -76,7 +76,22 @@ else
 //comprar un arma". Si tiene menos de 100, muestra "Necesitas más
 //monedas".
 
+int coins = 0;
 
+Console.WriteLine("\nIngrese las monedas acumuladas:");
+coins = int.Parse(Console.ReadLine());
+
+if (coins > 100)
+{
+    Console.WriteLine("Puedes comprar una mejora");
+} else if (coins == 100)
+{
+    Console.WriteLine("Puedes comprar un arma");
+}
+else
+{
+    Console.WriteLine("Necesitas más monedas");
+}
 
 //3. Personaje del jugador
 //Desarrolla un programa que permita al jugador elegir entre tres
@@ -87,6 +102,37 @@ else
 //Tip: Utiliza.ToLower o .ToUpper para evitar problemas con mayúsculas
 //o minúsculas.
 
+Console.WriteLine("\nElija un personaje: \n1- Guerrero\n2- Mago\n3- Arquero");
+choice = Console.ReadLine().Replace(" ","").ToLower();
+
+string result = choice switch
+{
+    "1" or "guerrero"=> "\nAgilidad: 30 \nFuerza: 50 \nInteligencia: 10",
+    "2" or "mago"=> "\nAgilidad: 20 \nFuerza: 20 \nInteligencia: 50",
+    "3" or "arquero"=> "\nAgilidad: 50 \nFuerza: 30 \nInteligencia: 10",
+    _ => "Opcion incorrecta"
+};
+
+Console.WriteLine(result);
+
+//switch (choice)
+//{
+//    case "1" or "guerrero": 
+//        Console.WriteLine("\nAgilidad: 30 \nFuerza: 50 \nInteligencia: 10");
+//        break;
+
+//    case "2" or "mago":
+//        Console.WriteLine("\nAgilidad: 20 \nFuerza: 20 \nInteligencia: 50");
+//        break;
+
+//    case "3" or "arquero":
+//        Console.WriteLine("\nAgilidad: 50 \nFuerza: 30 \nInteligencia: 10");
+//        break;
+
+//    default:
+//        Console.WriteLine("Opcion incorrecta");
+//        break;
+//}
 
 
 //4. Sistema de Combate
@@ -99,6 +145,36 @@ else
 //el daño final.
 //• El efecto de los dos bonus pueden darse en simultáneo.
 
+int damage = 10;
+
+Console.WriteLine("\nIngresa tu nivel: ");
+level = int.Parse(Console.ReadLine());
+
+Console.WriteLine("Ingresa tu fuerza: ");
+int force = int.Parse(Console.ReadLine());
+
+Console.WriteLine("Ingresa tu agilidad: ");
+int agility = int.Parse(Console.ReadLine());
+
+if (level > 10 && force > 15)
+{
+    if (agility > 20)
+    {
+        Console.WriteLine($"Daño: {damage * 2 + damage * 1.5}");
+    }
+    else
+    {
+        Console.WriteLine($"Daño: {damage * 2}");
+    }
+}
+else if (agility > 20)
+{
+    Console.WriteLine($"Daño: {damage * 1.5}");
+}
+else
+{
+    Console.WriteLine($"Daño: {damage}");
+}
 
 
 //5. Sistema de Puntuación con Bonus
