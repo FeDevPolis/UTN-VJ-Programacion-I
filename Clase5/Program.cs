@@ -107,9 +107,9 @@ choice = Console.ReadLine().Replace(" ","").ToLower();
 
 string result = choice switch
 {
-    "1" or "guerrero"=> "\nAgilidad: 30 \nFuerza: 50 \nInteligencia: 10",
-    "2" or "mago"=> "\nAgilidad: 20 \nFuerza: 20 \nInteligencia: 50",
-    "3" or "arquero"=> "\nAgilidad: 50 \nFuerza: 30 \nInteligencia: 10",
+    "1" or "guerrero"=> "Agilidad: 30 \nFuerza: 50 \nInteligencia: 10",
+    "2" or "mago"=> "Agilidad: 20 \nFuerza: 20 \nInteligencia: 50",
+    "3" or "arquero"=> "Agilidad: 50 \nFuerza: 30 \nInteligencia: 10",
     _ => "Opcion incorrecta"
 };
 
@@ -186,6 +186,25 @@ else
 //derrotados, aplica una penalización de 50 puntos. Muestra la
 //puntuación total.
 
+int time;
+int enemies;
+int bonus = 0;
+
+Console.WriteLine("\nCuántos minutos tardó en completar el nivel?");
+time = int.Parse(Console.ReadLine());
+
+Console.WriteLine("Cuántos enemigos derrotó?");
+enemies = int.Parse(Console.ReadLine());
+
+if (time < 5 && enemies > 10)
+{
+    bonus = 100;
+}else if (time > 10 || enemies < 5)
+{
+    bonus = -50;
+}
+
+Console.WriteLine($"Enemigos derrotados: {enemies} x 10 pts\nBonus:  {bonus} pts\nTotal: {enemies * 10 + bonus} pts");
 
 
 //6. Escudo y Defensa del Jugador
@@ -195,3 +214,25 @@ else
 //muestra "Defensa Alta". Si la resistencia del escudo es menor a 20 y
 //la agilidad es menor a 15, muestra "Defensa Baja". Si no se cumplen
 //ninguna de estas condiciones, muestra "Defensa Media".
+
+
+
+Console.WriteLine("\nIngresa la resistencia de tu escudo: ");
+int shield = int.Parse(Console.ReadLine());
+
+Console.WriteLine("Ingresa tu agilidad: ");
+agility = int.Parse(Console.ReadLine());
+
+if (shield > 50 || agility > 30)
+{
+    Console.WriteLine("Defensa ALTA");
+}
+else if (shield < 20 && agility < 15)
+{
+    Console.WriteLine("Defensa BAJA");
+}
+else
+{
+    Console.WriteLine("Defensa MEDIA");
+}
+
