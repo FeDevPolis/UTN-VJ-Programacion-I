@@ -30,14 +30,22 @@ for (int i = 0; i < enemiesPH.Length; i++)
 //for, simular la actualización la posición de cada enemigo sumándole 5
 //puntos.
 
-int[] enemiesPoss = new int[5];
-Random poss = new Random();
+int[][] enemiesPoss = new int[5][];
+Random randomAux = new Random();
 
 for (int i = 0;i < enemiesPoss.Length; i++)
 {
-    enemiesPoss[i] = poss.Next(1000);
-    Console.WriteLine($"\nPosición del enemigo: {enemiesPoss[i]}");
-    enemiesPoss[i] += 5;
-    Console.WriteLine($"Posición actualizada del enemigo: {enemiesPoss[i]}");
+    // Crea un array para las coordenadas X, Y, Z.
+    enemiesPoss[i] = new int[3];
+
+    enemiesPoss[i][0] = randomAux.Next(1000); //X
+    enemiesPoss[i][1] = randomAux.Next(1000); //Y
+    enemiesPoss[i][2] = randomAux.Next(1000); //Z
+
+    Console.WriteLine($"\nPosición del enemigo {i + 1}: (X, Y, Z) = ({enemiesPoss[i][0]}, {enemiesPoss[i][1]}, {enemiesPoss[i][2]})");
+    enemiesPoss[i][0] += 5;
+    //enemiesPoss[i][1] += 5;
+    //enemiesPoss[i][2] += 5;
+    Console.WriteLine($"\nPosición actualizada del enemigo {i + 1}: (X, Y, Z) = ({enemiesPoss[i][0]}, {enemiesPoss[i][1]}, {enemiesPoss[i][2]})");
 }
 
