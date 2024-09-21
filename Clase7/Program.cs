@@ -33,7 +33,7 @@ for (int i = 0; i < enemiesPH.Length; i++)
 int[][] enemiesPoss = new int[5][];
 Random randomAux = new Random();
 
-for (int i = 0;i < enemiesPoss.Length; i++)
+for (int i = 0; i < enemiesPoss.Length; i++)
 {
     // Crea un array para las coordenadas X, Y, Z.
     enemiesPoss[i] = new int[3];
@@ -46,6 +46,48 @@ for (int i = 0;i < enemiesPoss.Length; i++)
     enemiesPoss[i][0] += 5;
     //enemiesPoss[i][1] += 5;
     //enemiesPoss[i][2] += 5;
+
+    //int numberOfCoordToUpdate = randomAux.Next(4);
+
+    //bool[] coordToUpdate = new bool[3];
+
+    //for (int j = 0; j < numberOfCoordToUpdate; j++)
+    //{
+    //    int coordinateIndex;
+
+    //    do
+    //    {
+    //        coordinateIndex = randomAux.Next(3);
+    //    }
+    //    while
+    //}
+
     Console.WriteLine($"\nPosición actualizada del enemigo {i + 1}: (X, Y, Z) = ({enemiesPoss[i][0]}, {enemiesPoss[i][1]}, {enemiesPoss[i][2]})");
 }
+
+
+//variación con struct
+
+struct Coordenadas3D
+{
+    public double ejeX;
+    public double ejeY;
+    public double ejeZ;
+
+    public Coordenadas3D(double x, double y, double z)
+    {
+        ejeX = x;
+        ejeY = y;
+        ejeZ = z;
+    }
+}
+
+Coordenadas3D[] coord = new Coordenadas3D[5];
+
+for (int i = 0; i < coord.Length; i++)
+{
+    coord[i] = new Coordenadas3D(randomAux.Next(1000), randomAux.Next(1000), randomAux.Next(1000));
+    Console.WriteLine($"\nPosición del enemigo {i + 1}: (X, Y, Z) = ({coord[i].ejeX}, {coord[i].ejeY}, {coord[i].ejeZ})");
+}
+
 
