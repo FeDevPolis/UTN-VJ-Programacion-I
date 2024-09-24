@@ -172,21 +172,21 @@
 //jugado en minutos. Luego, el sistema debe convertir y mostrar el
 //tiempo jugado en horas y minutos.
 
-void TimeAndGame()
-{
-    Console.WriteLine("Ingresa el nombre del juego: ");
-    string game = Console.ReadLine();
+//void TimeAndGame()
+//{
+//    Console.WriteLine("Ingresa el nombre del juego: ");
+//    string game = Console.ReadLine();
 
-    Console.Write("Ingrese los minutos jugados: ");
-    int time = int.Parse(Console.ReadLine());
+//    Console.Write("Ingrese los minutos jugados: ");
+//    int time = int.Parse(Console.ReadLine());
 
-    int hours = time / 60;
-    int minutes = time % 60;
+//    int hours = time / 60;
+//    int minutes = time % 60;
 
-    Console.WriteLine($"Has jugado {game} durante {hours} horas y {minutes} minutos.");
-}
+//    Console.WriteLine($"Has jugado {game} durante {hours} horas y {minutes} minutos.");
+//}
 
-TimeAndGame();
+//TimeAndGame();
 
 
 //12) Un sistema que solicite el ingreso de los nombres de tres personajes.
