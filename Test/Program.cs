@@ -45,14 +45,35 @@ struct Coordenadas3D
             case 0:
                 ejeX += 5;
                 break;
-            
+
             case 1:
                 ejeY += 5;
                 break;
-            
+
             case 2:
                 ejeZ += 5;
                 break;
         }
     }
 }
+
+
+
+
+
+
+
+
+
+//-------------------------------------------------------------------------------------------------
+
+//int[] numeros = {1, 2, 3, 4};
+//int producto = 1;
+
+//producto == numeros[0];
+
+//bool aux = producto == numeros[0];
+
+//Console.WriteLine(aux);
+
+//Console.WriteLine(producto == numeros[0]);
