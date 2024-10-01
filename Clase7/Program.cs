@@ -66,28 +66,3 @@ for (int i = 0; i < enemiesPoss.Length; i++)
 }
 
 
-//variación con struct
-
-struct Coordenadas3D
-{
-    public double ejeX;
-    public double ejeY;
-    public double ejeZ;
-
-    public Coordenadas3D(double x, double y, double z)
-    {
-        ejeX = x;
-        ejeY = y;
-        ejeZ = z;
-    }
-}
-
-Coordenadas3D[] coord = new Coordenadas3D[5];
-
-for (int i = 0; i < coord.Length; i++)
-{
-    coord[i] = new Coordenadas3D(randomAux.Next(1000), randomAux.Next(1000), randomAux.Next(1000));
-    Console.WriteLine($"\nPosición del enemigo {i + 1}: (X, Y, Z) = ({coord[i].ejeX}, {coord[i].ejeY}, {coord[i].ejeZ})");
-}
-
-
